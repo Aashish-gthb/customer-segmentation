@@ -9,7 +9,7 @@ def load_and_clean(filepath="data/OnlineRetail.csv"):
     df['TotalPrice'] = df['Quantity'] * df['UnitPrice']
     return df
 
-    return df
+    
 
 
 def build_rfm(df):
