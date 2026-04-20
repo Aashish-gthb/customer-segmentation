@@ -1,34 +1,52 @@
-# 🛍️ Customer Segmentation using RFM Analysis & K-Means Clustering
+# E-Commerce Customer Segmentation
+
+An end-to-end machine learning project that segments e-commerce customers 
+into distinct groups using unsupervised learning techniques.
+
+## Live Demo
+https://customer-segmentation-lprxgdgvkjkfofdpxrvvtb.streamlit.app
 
 ## Overview
-An end-to-end machine learning project that segments e-commerce customers 
-into distinct groups using unsupervised learning.
-
-## Tech Stack
-- Python, Pandas, Scikit-learn
-- Streamlit (dashboard)
-- Plotly (visualizations)
-
-## ML Approach
-- **RFM Analysis** to engineer features (Recency, Frequency, Monetary)
-- **K-Means Clustering** to group customers
-- **Elbow Method** to find optimal number of clusters
+Applied RFM Analysis and K-Means Clustering on a real UK e-commerce dataset 
+containing 541,910 transactions from 4,338 unique customers to identify 
+distinct customer groups that businesses can use for targeted marketing.
 
 ## Segments Identified
 | Segment | Description |
 |---------|-------------|
-| 💎 Champions | High value, frequent, recent buyers |
-| ⚠️ At Risk | Used to buy often but haven't recently |
-| 🌱 New Customers | Bought recently but not often |
-| 💤 Hibernating | Low engagement, low spending |
+| High Value Customers | Recent, frequent buyers with high spending |
+| At Risk Customers | Previously active but showing declining engagement |
+| New Customers | Recent first-time buyers with low frequency |
+| Low Engagement Customers | Infrequent buyers with low monetary value |
+
+## Tech Stack
+- Python
+- Pandas & NumPy
+- Scikit-learn (K-Means Clustering)
+- Plotly (Visualizations)
+- Streamlit (Dashboard)
+
+## ML Approach
+- RFM Feature Engineering (Recency, Frequency, Monetary)
+- Standard Scaling for normalization
+- K-Means Clustering with Elbow Method for optimal K
+- Interactive 3D cluster visualization
 
 ## Dataset
-Online Retail Dataset from UCI ML Repository via Kaggle
-500K+ transactions from a UK e-commerce store (2010–2011)
+Online Retail Dataset from UCI Machine Learning Repository
+- 541,910 transactions
+- 4,338 unique customers
+- UK based e-commerce store (2010-2011)
 
 ## How to Run
 pip install -r requirements.txt
 streamlit run app.py
 
-## Live Demo
-https://customer-segmentation-lprxgdgvkjkfofdpxrvvtb.streamlit.app
+## Project Structure
+customer-segmentation/
+├── data/
+│   └── OnlineRetail.csv
+├── app.py
+├── segmentation.py
+├── requirements.txt
+└── README.md
