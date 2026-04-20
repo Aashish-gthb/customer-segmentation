@@ -39,10 +39,10 @@ def apply_kmeans(rfm, n_clusters=4):
 
     # Label the segments meaningfully
     segment_map = {
-        0: "💎 Champions",
-        1: "⚠️ At Risk",
-        2: "🌱 New Customers",
-        3: "💤 Hibernating"
+        0: "High Value Customers",
+        1: "At Risk Customers",
+        2: "New Customers",
+        3: "Low Engagement Customers"
     }
     rfm['Segment'] = rfm['Cluster'].map(segment_map)
 
