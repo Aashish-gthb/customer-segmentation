@@ -7,7 +7,7 @@ st.title("🛍️ E-Commerce Customer Segmentation")
 st.markdown("Using **RFM Analysis + K-Means Clustering** to identify customer groups")
 
 # Load data
-df  = load_and_clean(r"data\OnlineRetail.csv")
+df  = load_and_clean("data/OnlineRetail.csv")
 rfm = build_rfm(df)
 rfm = apply_kmeans(rfm)
 
